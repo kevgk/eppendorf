@@ -1,0 +1,21 @@
+.headline {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1.3rem;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  color: #aaa;
+  transition: color 0.3s;
+}
+
+.headline:hover {
+  color: #000;
+}
+
+.headline__active {
+  font-weight: 400;
+  padding-right: 0;
+  color: #000;
+}

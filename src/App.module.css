@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.nav__button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav__button:hover {
+  background-color: #444;
+}

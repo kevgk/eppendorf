@@ -1,0 +1,19 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 480px;
+}
+
+input {
+  border-radius: 10px;
+  border: solid 1px #dfdfdf;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+}

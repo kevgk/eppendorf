@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import data from "./data/data.json";
+import styles from "./App.module.css";
+import { List } from "./components/List";
+import { Form } from "./components/Form";
 
-function App() {
+export function App(): JSX.Element {
+  const [page, setPage] = useState<"List" | "Form">("List");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <nav className={styles.nav}>
+        <span className={styles.nav__button} onClick={() => setPage("List")}>
+          List
+        </span>
+        <span className={styles.nav__button} onClick={() => setPage("Form")}>
+          Form
+        </span>
+      </nav>
+      {page === "List" && <List data={data} initialSortKey="id" />}
+      {page === "Form" && <Form />}
+    </>
   );
 }
-
-export default App;

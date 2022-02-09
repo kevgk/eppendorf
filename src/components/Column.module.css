@@ -1,0 +1,8 @@
+.column {
+  padding: 10px 10px;
+  border-right: 1px solid #ddd;
+}
+
+.column:last-child {
+  border-right: none;
+}
